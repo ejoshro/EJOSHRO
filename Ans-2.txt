@@ -1,0 +1,4 @@
+Suppose you have deployed your application using a deployment controller. Assume the initial number of replicas is one. Write the steps needed to update a container's image using deployment, making sure that there is zero downtime.
+Ans- We will use below commands for upgrade deployment without downtime.
+1. kubectl get deployment -----> We can speify the deployment name in which we need to update the image.
+2. kubectl set image deployment/frontend www=image:v2

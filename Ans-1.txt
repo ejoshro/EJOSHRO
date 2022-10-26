@@ -1,0 +1,4 @@
+Write a common use-case, where you will use a daemon set instead of replica set.
+Ans- Replicaset is use to run the number of replica should on specified node as per the config files, where as deamonset is
+for there should be minimum one pod should run on every node. Replicaset is defined for the number of replica should be same if
+any pod crash and demonset defined at cluser level like for monitoring purpose.
