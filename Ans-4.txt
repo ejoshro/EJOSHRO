@@ -1,0 +1,23 @@
+Command used during assignment
+kubectl apply -f .
+kubectl get all
+
+
+8. Now try to delete the Pods one by one (first voting Pod, then worker pod, then db pod) and see what happens to the voting and result app after deleting.
+Ans- Voting app is do accounting of vote and remove replication of vote.
+If we delete any pod it will recreate as it is replicaset and there will be one pod to serve service.
+
+After deleteing of db pod voting app stop working as it store the voting count. Without that it will not consider voting.
+Voting app work properly we need to redeploy DB pod. We will use below command to redeploy voting app.
+kubectl apply -f db.yaml .
+
+your comment on WHY result app STOPPED working after db pod stop
+As DB pod is not there so no storage of voting from user. To present the data by result pod it take count from DB but as DB not there
+it will not work.
+
+your answer to HOW YOU MADE THE RESULT POD work.
+Once DB pod is up and working again after redeployment it result app will take count from it and it show the voting count.
+
+
+As K8 infra is not working i am not able to take logs and screenshots.
+
